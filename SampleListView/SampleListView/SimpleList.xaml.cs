@@ -15,6 +15,18 @@ namespace SampleListView
         public SimpleList()
         {
             InitializeComponent();
+
+            List<string> listData = new List<string>() { "First", "Second", "Third"};
+            lvData.ItemsSource = listData;
+
+
+            lvData.ItemTapped += LvData_ItemTapped;
+        }
+
+        private async void LvData_ItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            await DisplayAlert("Tapped", e.Item.ToString() + " was selected", "OK");
+            ((ListView)sender).SelectedItem = null;
         }
     }
 }
