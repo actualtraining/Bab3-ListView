@@ -30,6 +30,14 @@ namespace SampleListView
             set { description = value; OnPropertyChanged("Description"); }
         }
 
+        private string gambar;
+        public string Gambar
+        {
+            get { return gambar; }
+            set { gambar = value; OnPropertyChanged("Gambar"); }
+        }
+
+
     }
 
 

@@ -44,9 +44,12 @@ namespace SampleListView
             {
                 listData = new List<ListItem>()
                 {
-                    new ListItem { Kode="AA001", Title="Mystic", Description="Team Mystic with blue badge" },
-                    new ListItem { Kode="AA002", Title="Instinct", Description="Team Instinct with yellow badge" },
-                    new ListItem { Kode="AA003", Title="Valor", Description="Team Valor with red badge" }
+                    new ListItem { Kode="AA001", Title="Mystic", Description="Team Mystic with blue badge",
+                        Gambar="1.png"},
+                    new ListItem { Kode="AA002", Title="Instinct", Description="Team Instinct with yellow badge",
+                        Gambar="2.png"},
+                    new ListItem { Kode="AA003", Title="Valor", Description="Team Valor with red badge",
+                        Gambar="3.png"}
                 };
             }
 
