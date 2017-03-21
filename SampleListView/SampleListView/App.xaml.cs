@@ -13,9 +13,7 @@ namespace SampleListView
         {
             InitializeComponent();
 
-            MainPage = new SampleListView.SimpleList();
-
-
+            MainPage = new SampleListView.SampleDataModel();
         }
 
         protected override void OnStart()
