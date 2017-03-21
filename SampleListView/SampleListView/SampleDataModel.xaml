@@ -9,7 +9,20 @@
         <ListView ItemsSource="{Binding ListItems}" x:Name="lvData">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <ImageCell ImageSource="{Binding Gambar}" Text="{Binding Title}" Detail="{Binding Description}" />
+                    <!--<ImageCell ImageSource="{Binding Gambar}" Text="{Binding Title}" Detail="{Binding Description}" />-->
+                    <ViewCell>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="60" />
+                                <ColumnDefinition Width="80" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <Label Text="{Binding Kode}" Grid.Row="0" Grid.Column="0" />
+                            <Label Text="{Binding Title}" Grid.Row="0" Grid.Column="1" />
+                            <Label Text="{Binding Description}" Grid.Row="0" Grid.Column="2" />
+                        </Grid>
+                    </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
