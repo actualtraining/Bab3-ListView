@@ -26,8 +26,8 @@
                 <DataTemplate>
                     <ViewCell>
                         <ViewCell.ContextActions>
-                            <MenuItem Text="More" Command="{Binding More}" />
-                            <MenuItem Text="Delete" Command="{Binding Delete}" />
+                            <MenuItem Text="More" Command="{Binding MoreCommand}" />
+                            <MenuItem Text="Delete" Command="{Binding DeleteCommand}" />
                         </ViewCell.ContextActions>
                         <Grid>
                             <Grid.ColumnDefinitions>

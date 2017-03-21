@@ -74,7 +74,7 @@ namespace SampleListView
             BuyCommand = new Command(BuyRequested);
             SellCommand = new Command(SellRequested);
 
-            MoreCommand = new Command(CommandRequested);
+            MoreCommand = new Command(MoreRequested);
             DeleteCommand = new Command(DeleteRequested);
         }
 
@@ -83,9 +83,9 @@ namespace SampleListView
             MessagingCenter.Send<Barang>(this, "DeleteRequested");
         }
 
-        private void CommandRequested()
+        private void MoreRequested()
         {
-            MessagingCenter.Send<Barang>(this, "CommandRequested");
+            MessagingCenter.Send<Barang>(this, "MoreRequested");
         }
 
         private void SellRequested()
@@ -102,14 +102,14 @@ namespace SampleListView
         public Command MoreCommand
         {
             get { return moreCommand; }
-            set { moreCommand = value; }
+            set { moreCommand = value; OnPropertyChanged("MoreCommand"); }
         }
 
         private Command deleteCommand;
         public Command DeleteCommand
         {
             get { return deleteCommand; }
-            set { deleteCommand = value; }
+            set { deleteCommand = value; OnPropertyChanged("DeleteCommand"); }
         }
 
 

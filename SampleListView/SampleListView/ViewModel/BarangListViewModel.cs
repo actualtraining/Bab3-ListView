@@ -38,7 +38,7 @@ namespace SampleListView.ViewModel
                 displayAlertAction.Invoke("Keterangan", barang.Nama + " was clicked", "OK");
             });
 
-            MessagingCenter.Subscribe<Barang>(this, "CommandRequested", CommandRequested);
+            MessagingCenter.Subscribe<Barang>(this, "MoreRequested", MoreRequested);
             MessagingCenter.Subscribe<Barang>(this, "DeleteRequested", DeleteRequested);
         }
 
@@ -47,9 +47,9 @@ namespace SampleListView.ViewModel
             displayAlertAction.Invoke("Keterangan", barang.Nama + " was deleted", "OK");
         }
 
-        private void CommandRequested(Barang barang)
+        private void MoreRequested(Barang barang)
         {
-            displayAlertAction.Invoke("Keterangan", barang.Nama + " was requested", "OK");
+            displayAlertAction.Invoke("More", barang.Nama, "OK");
         }
 
         private void BuyRequested(Barang barang)
