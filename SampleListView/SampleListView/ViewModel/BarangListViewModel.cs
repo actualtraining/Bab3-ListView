@@ -44,6 +44,12 @@ namespace SampleListView.ViewModel
 
         private void DeleteRequested(Barang barang)
         {
+            if (barang.VisibleBtn)
+                barang.VisibleBtn = false;
+            else
+                barang.VisibleBtn = true;
+
+
             displayAlertAction.Invoke("Keterangan", barang.Nama + " was deleted", "OK");
         }
 

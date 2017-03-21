@@ -48,7 +48,7 @@
                                    Grid.Column="3" TextColor="{Binding Warna}" />
 
                             <StackLayout Grid.Row="1" Grid.Column="1"  Orientation="Horizontal">
-                                <Button Text="Buy Now" Command="{Binding BuyCommand}"  />
+                                <Button Text="Buy Now" Command="{Binding BuyCommand}" IsVisible="{Binding VisibleBtn}"  />
                                 <Button Text="Sell" Command="{Binding SellCommand}" />
                             </StackLayout>
                         </Grid>

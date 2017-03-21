@@ -53,6 +53,15 @@ namespace SampleListView
             set { warna = value; OnPropertyChanged("Warna"); }
         }
 
+        private bool visibleBtn;
+
+        public bool VisibleBtn
+        {
+            get { return visibleBtn; }
+            set { visibleBtn = value; OnPropertyChanged("VisibleBtn"); }
+        }
+
+
 
         private Command buycommand;
         public Command BuyCommand
@@ -71,6 +80,7 @@ namespace SampleListView
         public Barang()
         {
             Warna = Color.Black;
+            VisibleBtn = true;
             BuyCommand = new Command(BuyRequested);
             SellCommand = new Command(SellRequested);
 
