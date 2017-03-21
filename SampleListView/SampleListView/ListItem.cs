@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Xamarin.Forms;
 
 namespace SampleListView
 {
-    public class ListItem : BindableObject
+    public class ListItem : INotifyPropertyChanged
     {
         private string kode;
         public string Kode
@@ -31,6 +31,15 @@ namespace SampleListView
         }
 
         private string gambar;
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        protected virtual void OnPropertyChanged(string propertyName)
+        {
+            PropertyChangedEventHandler handler = PropertyChanged;
+            if (handler != null) handler(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+
         public string Gambar
         {
             get { return gambar; }
