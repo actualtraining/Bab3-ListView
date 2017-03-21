@@ -37,6 +37,19 @@ namespace SampleListView.ViewModel
                 barang.Warna = Color.Red;
                 displayAlertAction.Invoke("Keterangan", barang.Nama + " was clicked", "OK");
             });
+
+            MessagingCenter.Subscribe<Barang>(this, "CommandRequested", CommandRequested);
+            MessagingCenter.Subscribe<Barang>(this, "DeleteRequested", DeleteRequested);
+        }
+
+        private void DeleteRequested(Barang barang)
+        {
+            displayAlertAction.Invoke("Keterangan", barang.Nama + " was deleted", "OK");
+        }
+
+        private void CommandRequested(Barang barang)
+        {
+            displayAlertAction.Invoke("Keterangan", barang.Nama + " was requested", "OK");
         }
 
         private void BuyRequested(Barang barang)

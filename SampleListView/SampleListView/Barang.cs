@@ -73,6 +73,19 @@ namespace SampleListView
             Warna = Color.Black;
             BuyCommand = new Command(BuyRequested);
             SellCommand = new Command(SellRequested);
+
+            MoreCommand = new Command(CommandRequested);
+            DeleteCommand = new Command(DeleteRequested);
+        }
+
+        private void DeleteRequested()
+        {
+            MessagingCenter.Send<Barang>(this, "DeleteRequested");
+        }
+
+        private void CommandRequested()
+        {
+            MessagingCenter.Send<Barang>(this, "CommandRequested");
         }
 
         private void SellRequested()
@@ -84,5 +97,21 @@ namespace SampleListView
         {
             MessagingCenter.Send<Barang>(this, "BuyRequested");
         }
+
+        private Command moreCommand;
+        public Command MoreCommand
+        {
+            get { return moreCommand; }
+            set { moreCommand = value; }
+        }
+
+        private Command deleteCommand;
+        public Command DeleteCommand
+        {
+            get { return deleteCommand; }
+            set { deleteCommand = value; }
+        }
+
+
     }
 }

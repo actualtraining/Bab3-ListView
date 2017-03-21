@@ -25,6 +25,10 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
+                        <ViewCell.ContextActions>
+                            <MenuItem Text="More" Command="{Binding More}" />
+                            <MenuItem Text="Delete" Command="{Binding Delete}" />
+                        </ViewCell.ContextActions>
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="70" />
@@ -40,7 +44,8 @@
                             <Label Text="{Binding Kode}" FontSize="Medium" Grid.Row="0" Grid.Column="0" />
                             <Label Text="{Binding Nama}" FontSize="Medium" FontAttributes="Bold" Grid.Row="0" Grid.Column="1" />
                             <Label Text="{Binding Stok}" FontSize="Medium" FontAttributes="Bold" HorizontalTextAlignment="End" Grid.Row="0" Grid.Column="2" />
-                            <Label Text="{Binding HargaJual}" FontSize="Medium" FontAttributes="Bold" HorizontalTextAlignment="End" Grid.Row="0" Grid.Column="3" TextColor="{Binding Warna}" />
+                            <Label Text="{Binding HargaJual}" FontSize="Medium" FontAttributes="Bold" HorizontalTextAlignment="End" Grid.Row="0" 
+                                   Grid.Column="3" TextColor="{Binding Warna}" />
 
                             <StackLayout Grid.Row="1" Grid.Column="1"  Orientation="Horizontal">
                                 <Button Text="Buy Now" Command="{Binding BuyCommand}"  />
