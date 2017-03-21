@@ -39,7 +39,7 @@
                             <Label Text="{Binding Kode}" Grid.Row="0" Grid.Column="1" />
                             <Label Text="{Binding Nama}" FontAttributes="Bold" Grid.Row="0" Grid.Column="1" />
                             <Label Text="{Binding Stok}" FontAttributes="Bold" HorizontalTextAlignment="End" Grid.Row="0" Grid.Column="2" />
-                            <Label Text="{Binding Harga}" FontAttributes="Bold" HorizontalTextAlignment="End" Grid.Row="0" Grid.Column="3" />
+                            <Label Text="{Binding HargaJual}" FontAttributes="Bold" HorizontalTextAlignment="End" Grid.Row="0" Grid.Column="3" />
 
                             <StackLayout Grid.Row="1" Grid.ColumnSpan="4" Orientation="Horizontal" HorizontalOptions="Center">
                                 <Button Text="Buy Now" Command="{Binding BuyCommand}" />

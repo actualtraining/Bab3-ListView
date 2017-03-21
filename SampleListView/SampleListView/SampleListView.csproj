@@ -53,6 +53,7 @@
     <Compile Include="SimpleList.xaml.cs">
       <DependentUpon>SimpleList.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ViewModel\BarangListViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MainPage.xaml">
@@ -93,9 +94,7 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ViewModel\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <EmbeddedResource Include="BarangListPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
