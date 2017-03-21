@@ -6,7 +6,24 @@
         <StackLayout Orientation="Horizontal">
             <Button x:Name="btnChange" Text="Change" WidthRequest="150" />
         </StackLayout>
-        <ListView ItemsSource="{Binding ListItems}" x:Name="lvData">
+        <ListView ItemsSource="{Binding ListItems}" x:Name="lvData" Header=" ">
+            <ListView.HeaderTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="40" />
+                            <ColumnDefinition Width="60" />
+                            <ColumnDefinition Width="80" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <Label Text=" " Grid.Row="0" Grid.Column="1" />
+                        <Label Text="Kode" FontAttributes="Bold" Grid.Row="0" Grid.Column="1" />
+                        <Label Text="Title" FontAttributes="Bold" Grid.Row="0" Grid.Column="2" />
+                        <Label Text="Description" FontAttributes="Bold" Grid.Row="0" Grid.Column="3" />
+                    </Grid>
+                </DataTemplate>
+            </ListView.HeaderTemplate>
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <!--<ImageCell ImageSource="{Binding Gambar}" Text="{Binding Title}" Detail="{Binding Description}" />-->
