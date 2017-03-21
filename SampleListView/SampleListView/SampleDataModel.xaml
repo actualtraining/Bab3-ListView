@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SampleListView.SampleDataModel" Title="Sample Data Model">
-    <ListView ItemsSource="{Binding ListItems}">
+    <ListView ItemsSource="{Binding ListItems}" x:Name="lvData">
         <ListView.ItemTemplate>
             <DataTemplate>
                 <TextCell Text="{Binding Title}" Detail="{Binding Description}" TextColor="Red" 

@@ -17,6 +17,14 @@ namespace SampleListView
         {
             InitializeComponent();
             BindingContext = new ListViewDataModelVM();
+
+            lvData.ItemTapped += LvData_ItemTapped;
+        }
+
+        private async void LvData_ItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            ListItem currItem = (ListItem)e.Item;
+            await DisplayAlert("Keterangan", "Anda memilih Kode: " + currItem.Kode,"OK");
         }
 
         public class ListViewDataModelVM
@@ -26,9 +34,9 @@ namespace SampleListView
             {
                 listData = new List<ListItem>()
                 {
-                    new ListItem { Title="Mystic", Description="Team Mystic with blue badge" },
-                    new ListItem { Title="Instinct", Description="Team Instinct with yellow badge" },
-                    new ListItem { Title="Valor", Description="Team Valor with red badge" }
+                    new ListItem { Kode="AA001", Title="Mystic", Description="Team Mystic with blue badge" },
+                    new ListItem { Kode="AA002", Title="Instinct", Description="Team Instinct with yellow badge" },
+                    new ListItem { Kode="AA003", Title="Valor", Description="Team Valor with red badge" }
                 };
             }
 
@@ -43,6 +51,8 @@ namespace SampleListView
                     listData = value;
                 }
             }
+
+
         }
     }
 }

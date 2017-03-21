@@ -8,6 +8,7 @@ namespace SampleListView
 {
     public class ListItem
     {
+        public string Kode { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
     }
