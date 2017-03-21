@@ -16,6 +16,7 @@ namespace SampleListView
         public SampleDataModel()
         {
             InitializeComponent();
+            BindingContext = new ListViewDataModelVM();
         }
 
         public class ListViewDataModelVM
