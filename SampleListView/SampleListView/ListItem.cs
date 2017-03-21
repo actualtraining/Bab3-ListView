@@ -27,7 +27,7 @@ namespace SampleListView
         public string Description
         {
             get { return description; }
-            set { description = value; OnPropertyChanged("Description"); }
+            set { description = value; OnPropertyChanged("Description") }
         }
 
     }

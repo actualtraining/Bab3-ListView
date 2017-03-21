@@ -27,7 +27,7 @@ namespace SampleListView
             await DisplayAlert("Keterangan", "Anda memilih Kode: " + currItem.Kode,"OK");
         }
 
-        public class ListViewDataModelVM
+        public class ListViewDataModelVM : BindableObject
         {
             private List<ListItem> listData;
             public ListViewDataModelVM()
@@ -49,6 +49,7 @@ namespace SampleListView
                 set
                 {
                     listData = value;
+                    OnPropertyChanged("ListItems");
                 }
             }
 
