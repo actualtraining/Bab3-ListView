@@ -9,8 +9,7 @@
         <ListView ItemsSource="{Binding ListItems}" x:Name="lvData">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <TextCell Text="{Binding Title}" Detail="{Binding Description}" TextColor="Red" 
-                          DetailColor="Purple" />
+                    <ImageCell ImageSource="{Binding Gambar}" Text="{Binding Title}" Detail="{Binding Description}" />
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
