@@ -13,14 +13,16 @@
                     <ViewCell>
                         <Grid>
                             <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="40" />
                                 <ColumnDefinition Width="60" />
                                 <ColumnDefinition Width="80" />
                                 <ColumnDefinition Width="*" />
                             </Grid.ColumnDefinitions>
 
-                            <Label Text="{Binding Kode}" Grid.Row="0" Grid.Column="0" />
-                            <Label Text="{Binding Title}" Grid.Row="0" Grid.Column="1" />
-                            <Label Text="{Binding Description}" Grid.Row="0" Grid.Column="2" />
+                            <Image Source="{Binding Gambar}" WidthRequest="40" Grid.Row="0" Grid.Column="0" />
+                            <Label Text="{Binding Kode}" Grid.Row="0" Grid.Column="1" />
+                            <Label Text="{Binding Title}" Grid.Row="0" Grid.Column="2" />
+                            <Label Text="{Binding Description}" Grid.Row="0" Grid.Column="3" />
                         </Grid>
                     </ViewCell>
                 </DataTemplate>
