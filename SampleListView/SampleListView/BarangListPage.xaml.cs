@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using SampleListView.ViewModel;
 
 namespace SampleListView
 {
@@ -15,6 +16,7 @@ namespace SampleListView
         public BarangListPage()
         {
             InitializeComponent();
+            BindingContext = new BarangListViewModel(DisplayAlert);
         }
     }
 }

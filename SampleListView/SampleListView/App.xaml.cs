@@ -13,7 +13,7 @@ namespace SampleListView
         {
             InitializeComponent();
 
-            MainPage = new SampleListView.SampleDataModel();
+            MainPage = new SampleListView.BarangListPage();
         }
 
         protected override void OnStart()

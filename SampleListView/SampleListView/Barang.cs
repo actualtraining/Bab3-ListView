@@ -19,15 +19,15 @@ namespace SampleListView
         private string nama;
         public string Nama
         {
-            get { return Nama; }
-            set { Nama = value; OnPropertyChanged("Nama"); }
+            get { return nama; }
+            set { nama = value; OnPropertyChanged("Nama"); }
         }
 
         private int stok;
         public int Stok
         {
             get { return stok; }
-            set { stok = value; }
+            set { stok = value; OnPropertyChanged("Stok"); }
         }
 
         private decimal hargaBeli;
@@ -55,7 +55,7 @@ namespace SampleListView
         public Command SellCommand
         {
             get { return sellcommand; }
-            set { sellcommand = value; }
+            set { sellcommand = value; OnPropertyChanged("SellCommand"); }
         }
 
         public Barang()
