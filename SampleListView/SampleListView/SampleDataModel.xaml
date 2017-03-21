@@ -2,12 +2,16 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SampleListView.SampleDataModel" Title="Sample Data Model">
-    <ListView ItemsSource="{Binding ListItems}" x:Name="lvData">
-        <ListView.ItemTemplate>
-            <DataTemplate>
-                <TextCell Text="{Binding Title}" Detail="{Binding Description}" TextColor="Red" 
+    <StackLayout>
+        <Button x:Name="btnChange" Text="Change" WidthRequest="200" />
+        <ListView ItemsSource="{Binding ListItems}" x:Name="lvData">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Title}" Detail="{Binding Description}" TextColor="Red" 
                           DetailColor="Purple" />
-            </DataTemplate>
-        </ListView.ItemTemplate>
-    </ListView>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
 </ContentPage>

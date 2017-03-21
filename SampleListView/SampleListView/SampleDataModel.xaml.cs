@@ -19,11 +19,21 @@ namespace SampleListView
             BindingContext = new ListViewDataModelVM();
 
             lvData.ItemTapped += LvData_ItemTapped;
+            btnChange.Clicked += BtnChange_Clicked;
         }
 
+        private ListItem modifList;
+        private void BtnChange_Clicked(object sender, EventArgs e)
+        {
+            modifList.Title = "Xamarin Forms Rock !";
+            modifList.Description = "Xamarin Forms Cross Platform Development !";
+        }
+
+        
         private async void LvData_ItemTapped(object sender, ItemTappedEventArgs e)
         {
             ListItem currItem = (ListItem)e.Item;
+            modifList = currItem;
             await DisplayAlert("Keterangan", "Anda memilih Kode: " + currItem.Kode,"OK");
         }
 
