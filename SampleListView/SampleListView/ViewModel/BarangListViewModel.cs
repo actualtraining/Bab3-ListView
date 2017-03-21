@@ -34,6 +34,7 @@ namespace SampleListView.ViewModel
             MessagingCenter.Subscribe<Barang>(this, "SellRequested", (sender) =>
             {
                 var barang = (Barang)sender;
+                barang.Warna = Color.Red;
                 displayAlertAction.Invoke("Keterangan", barang.Nama + " was clicked", "OK");
             });
         }

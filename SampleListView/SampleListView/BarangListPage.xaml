@@ -9,16 +9,16 @@
                 <DataTemplate>
                     <Grid>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="50" />
+                            <ColumnDefinition Width="70" />
                             <ColumnDefinition Width="*" />
                             <ColumnDefinition Width="40" />
                             <ColumnDefinition Width="100" />
                         </Grid.ColumnDefinitions>
 
                         <Label Text="Kode" Grid.Column="0" />
-                        <Label Text="Nama" FontAttributes="Bold" Grid.Row="0" Grid.Column="1" />
-                        <Label Text="Stok" FontAttributes="Bold" HorizontalTextAlignment="End"  Grid.Column="2" />
-                        <Label Text="Harga" FontAttributes="Bold" HorizontalTextAlignment="End"  Grid.Column="3" />
+                        <Label Text="Nama" FontAttributes="Bold" FontSize="Medium" Grid.Row="0" Grid.Column="1" />
+                        <Label Text="Stok" FontAttributes="Bold" FontSize="Medium" HorizontalTextAlignment="End"  Grid.Column="2" />
+                        <Label Text="Harga" FontAttributes="Bold" FontSize="Medium" HorizontalTextAlignment="End"  Grid.Column="3" />
                     </Grid>
                 </DataTemplate>
             </ListView.HeaderTemplate>
@@ -27,7 +27,7 @@
                     <ViewCell>
                         <Grid>
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="50" />
+                                <ColumnDefinition Width="70" />
                                 <ColumnDefinition Width="*" />
                                 <ColumnDefinition Width="40" />
                                 <ColumnDefinition Width="100" />
@@ -37,10 +37,10 @@
                                 <RowDefinition Height="40" />
                             </Grid.RowDefinitions>
 
-                            <Label Text="{Binding Kode}" Grid.Row="0" Grid.Column="0" />
-                            <Label Text="{Binding Nama}" FontAttributes="Bold" Grid.Row="0" Grid.Column="1" />
-                            <Label Text="{Binding Stok}" FontAttributes="Bold" HorizontalTextAlignment="End" Grid.Row="0" Grid.Column="2" />
-                            <Label Text="{Binding HargaJual}" FontAttributes="Bold" HorizontalTextAlignment="End" Grid.Row="0" Grid.Column="3" />
+                            <Label Text="{Binding Kode}" FontSize="Medium" Grid.Row="0" Grid.Column="0" />
+                            <Label Text="{Binding Nama}" FontSize="Medium" FontAttributes="Bold" Grid.Row="0" Grid.Column="1" />
+                            <Label Text="{Binding Stok}" FontSize="Medium" FontAttributes="Bold" HorizontalTextAlignment="End" Grid.Row="0" Grid.Column="2" />
+                            <Label Text="{Binding HargaJual}" FontSize="Medium" FontAttributes="Bold" HorizontalTextAlignment="End" Grid.Row="0" Grid.Column="3" TextColor="{Binding Warna}" />
 
                             <StackLayout Grid.Row="1" Grid.Column="1"  Orientation="Horizontal">
                                 <Button Text="Buy Now" Command="{Binding BuyCommand}"  />

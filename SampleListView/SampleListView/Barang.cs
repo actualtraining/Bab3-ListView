@@ -9,6 +9,8 @@ namespace SampleListView
 {
     public class Barang : BindableObject
     {
+        
+
         private string kode;
         public string Kode
         {
@@ -44,6 +46,14 @@ namespace SampleListView
             set { hargaJual = value; OnPropertyChanged("HargaJual"); }
         }
 
+        private Color warna;
+        public Color Warna
+        {
+            get { return warna; }
+            set { warna = value; OnPropertyChanged("Warna"); }
+        }
+
+
         private Command buycommand;
         public Command BuyCommand
         {
@@ -60,6 +70,7 @@ namespace SampleListView
 
         public Barang()
         {
+            Warna = Color.Black;
             BuyCommand = new Command(BuyRequested);
             SellCommand = new Command(SellRequested);
         }
